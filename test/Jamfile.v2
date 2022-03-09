@@ -25,12 +25,6 @@ project : requirements
   <library>/boost/nowide//boost_nowide
   <warnings>pedantic
   <warnings-as-errors>on
-  [ requires
-      cxx11_defaulted_functions
-      cxx11_noexcept
-      cxx11_rvalue_references
-      cxx11_static_assert
-  ]
   [ check-target-builds ../config//cxx11_moveable_fstreams "std::fstream is moveable and swappable" : : <build>no ] 
   ;
 
