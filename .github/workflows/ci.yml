@@ -204,7 +204,9 @@ jobs:
 
       - name: Run tests
         if: '!matrix.coverity'
-        run: ci/build.sh
+        run: |
+          B2_TARGETS="libs/$SELF/build" ci/build.sh
+          ci/build.sh
 
       - name: Run tests with simulated no LFS support
         env:
